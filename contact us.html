@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CENTRAL ZOO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imgs/logo remove.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    :root {
+      --bodyBg: #303841;
+      --formBg: #ECF4D6;
+      --textColor: #fff;
+      --primaryColor: #0076A3;
+      --paraColor: #5e6c79;
+      --paraColor: #74828f;
+
+    }
+
+    body {
+      font-family: 'Roboto Serif', serif;
+      color: var(--textColor);
+      background: rgb(206, 238, 218);
+      /* padding-bottom: 5em; */
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+      max-width: 550px;
+      margin: auto;
+      margin-top: 2em;
+    }
+
+    .sub-heading {
+      margin-bottom: .5em;
+      font-weight: bold;
+      color: black;
+      margin-right: 1%;
+    }
+    .sub-heading2{
+      margin-bottom: .5em;
+      font-weight: bold;
+      color: black;
+      font-size: large;
+    }
+
+
+    .heading-con {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-top: 3%;
+      color: #946c44;
+    }
+
+    .contactForm {
+      display: grid;
+      gap: 3em;
+    }
+
+    form {
+      width: 100%;
+      margin-top: 3em;
+    }
+
+    .para-con {
+      color: black;
+      font-size: 1.1rem;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .input {
+      width: 95%;
+      max-width: 700px;
+      border: none;
+      font-size: .9rem;
+      padding: 1em;
+      outline: none;
+      background-color: var(--formBg);
+      color: var(--paraColor);
+      border-radius: 10px;
+      border: 1px solid rgb(53, 53, 53);
+      margin-bottom: 1em;
+
+    }
+
+    .input:focus {
+      border: 1px solid darkgreen;
+    }
+
+    .input::placeholder {
+      text-transform: capitalize;
+    }
+
+    .submit {
+      background-color:black;
+      border: none;
+      color: var(--textColor);
+      font-weight: bold;
+      cursor: pointer;
+      width: 25%;
+      margin-right: 70%;
+    }
+
+    #map-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    margin-top: 10%;
+    }
+
+    #mapBg {
+      position: absolute;
+      background-color: black;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 90%;
+      border-radius: 20px;
+    }
+
+    #map {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 90%;
+      height: 90%;
+    }
+
+    #map iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .contactMethod {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2em;
+      text-align: left;
+    }
+
+    .method {
+      display: flex;
+      align-items: center;
+    }
+
+    .contactIcon {
+      font-size: 2rem;
+      color: black;
+      width: 70px;
+    }
+
+    @media screen and (min-width:800px) {
+      section {
+        max-width: 1100px;
+      }
+
+      .contactForm {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contactMethod {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- <div class="logo">
+    <p id="slogan">
+      
+      "𝘋𝘪𝘴𝘤𝘰𝘷𝘦𝘳 𝘵𝘩𝘦 𝘸𝘪𝘭𝘥 𝘸𝘪𝘵𝘩𝘪𝘯 𝘢𝘵 𝘊𝘦𝘯𝘵𝘳𝘢𝘭 𝘡𝘰𝘰 – 𝘸𝘩𝘦𝘳𝘦 𝘤𝘰𝘯𝘴𝘦𝘳𝘷𝘢𝘵𝘪𝘰𝘯
+      𝘮𝘦𝘦𝘵𝘴 𝘧𝘢𝘴𝘤𝘪𝘯𝘢𝘵𝘪𝘰𝘯!"
+    </p>
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg  ">
+    <img src="imgs/White logo - no background.png" alt="icon" height="60px">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item  ">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="safari.html">Safari Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="animal-info.html">Wildlife Catalog</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  
+  <!-- contact us  -->
+  <section class="contact-form">
+    <h1 class="heading-con">Contact Us!</h1>
+    <p class="para-con">For inquiries, suggestions, or just to say hello, connect with us through the provided form —
+      your thoughts matter to us!</p>
+
+    <div class="contactForm">
+      <form action="" onsubmit=" validateForm();">
+        <h1 class="sub-heading">Get In Touch!</h1>
+        <p class="para-con para-2">Contact us for a quote, help to join them.</p>
+        <input type="name" id="name" class="input" placeholder="Your name" >
+        <input type="email" id="email" class="input" placeholder="Your email" >
+        <input type="text" id="subject" class="input" placeholder="Your subject" >
+        <textarea class="input" id="message" cols="30" rows="5" placeholder="Your message..." ></textarea>
+        <input type="submit" class="input submit" value="Send Message">
+    </form>
+
+      <div id="map-container">
+        <div id="mapBg"></div>
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14472.55141650622!2d67.0330334!3d24.9273733!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1703529313237!5m2!1sen!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="contactMethod">
+      <div class="method">
+        <i class="fa-solid fa-location-dot contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading2">Location</h1>
+          <p class="para-con">Aptech Computer Education North <br> Nazimabad</p>
+        </article>
+      </div>
+
+      <div class="method">
+        <i class="fa-solid fa-envelope contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading2">Email</h1>
+          <p class="para-con">Email: <br> Eprojectaptech2023@gmail.com</p>
+        </article>
+      </div>
+
+      <div class="method">
+        <i class="fa-solid fa-phone contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading2">Phone</h1>
+          <p class="para-con">12345678912 <br>12345678912</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Footer -->
+<footer class="text-lg-start ">
+  <div class="container p-4 pb-4">
+    <section class="">
+      <div class="row">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <img src="imgs/Black logo - no background.png" height="55px" class="mb-4" alt="">
+
+          <p class="footer-para">
+            Discover the magic of nature at <strong>THE CENTRAL ZOO.</strong> Join us in protecting our planet's incredible
+            biodiversity. Stay connected for the latest news
+            and events. Thank you for being a part of our journey!
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+
+        <!-- Grid column -->
+        <div class="quick-links col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class=" mb-4 ">Quick Links</h6>
+          <p> <a href="./index.html"> <img src="imgs/homeF.png" alt="" height="19px">Home</a></p>
+          <p> <a href="./gallery.html"><img src="imgs/galleryF.png" alt="" height="19px">Gallery </a></p>
+          <p> <a href="./about us.html"><img src="imgs/aboutF.png" alt="" height="19px">About us</a> </p>
+          <p> <a href="./contact us.html"><img src="imgs/contactF.png" alt="" height="19px">Contact us</a></p>
+          <p> <a href="./query.html"> <img src="imgs/feedbackF.png" alt="" height="19px">Feedback and Query</a></p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="socials col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class=" mb-4 ">Follow us</h6>
+          <i class="bi bi-facebook"></i> <a href="https://www.facebook.com/login/"  > facebook</a> <br>
+          <i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/login"> linkedin</a><br>
+          <i class="bi bi-twitter"></i> <a href="https://twitter.com/"> twitter </a><br>
+          <i class="bi bi-google"></i> <a href="https://www.google.com/"> google </a><br>
+
+    </section>
+  </div>
+
+
+  <!-- Copyright -->
+  <div class="copyright  p-3">
+    <a class="text-white  " href="index.html">The Central Zoo.com</a> <span class="copy"> &nbsp; © 2023 Copyright:</span>
+  </div>
+</footer>
+</div>
+<!-- Footer -->
+
+
+
+
+
+
+ <!-- javascript -->
+
+ <script>
+  function validateForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value
+  if (name === '' || email === '' || subject === '' || message === '') {
+          alert('Please fill in all fields');
+          return false; // prevent form submission
+  } else {
+      alert('Form submitted successfully!');
+     
+  }
+  }
+</script>
+
+
+
+
+<script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+ 

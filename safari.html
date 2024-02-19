@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CENTRAL ZOO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imgs/logo remove.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg  ">
+    <img src="imgs/White logo - no background.png" alt="icon" height="60px">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item  ">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="safari.html">Safari Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="animal-info.html">Wildlife Catalog</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="safari-div">
+    <h2>Book Your Tickets!</h2>
+    <p style="padding: 2%;">Zoo Tickets includes wildlife safari bus along with other facilities like interpretation
+      Centre, 180 degree theatre, Children park etc. There is no need to take seperate Entry ticket.
+      <br><b>Note : Tickets once booked cannot be cancelled.</b>🐾
+    </p>
+  </div>
+
+  <div class="main">
+    <div class="one">
+      <div class="page">
+        <div class="booking">
+
+          <div id="heading">
+            <h1>Ready to Experience Amazing?</h1>
+          </div>
+          <br><br>
+          <form action="" id="myForm">
+            <b>Name :</b>
+            <div id="linkp">
+              <div class="name">
+                <input class="form-control form-control-sm" id="name" type="text" placeholder="Name"
+                  aria-label=".form-control-sm example">
+              </div>
+            </div>
+            <br>
+            <b>Email :</b>
+            <div class="email">
+              <div class="col-sm-10">
+                <input type="email" id="email" class="form-control form-control-sm" id="colFormLabelSm"
+                  placeholder="Your email">
+              </div>
+            </div>
+            <br>
+            <b>Number of Adults :</b>
+            <div class="info">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="adults">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <br>
+            <b>Number of Chidrens :</b>
+            <div class="info">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="children">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <br>
+            <b>Number of infants :</b>
+            <div class="info">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="infants">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <br>
+            <b>Safari Timeslot :</b>
+            <div class="info">
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="timeslot">
+                <option selected>10 a.m - 12 p.m</option>
+                <option value="1">12 a.m - 2 p.m</option>
+                <option value="2">2 a.m - 4 p.m</option>
+                <option value="3">4 a.m - 6 p.m</option>
+              </select>
+            </div>
+
+            <br>
+            <b>Visiting Date :</b>
+            <div class="date">
+              <input type="date" id="visitDate">
+            </div>
+
+            <br>
+            <b>Phone Number : </b>
+            <div class="number">
+              <input type="tel" id="phoneNumber">
+            </div>
+
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="terms">
+              <label class="form-check-label" for="flexCheckDefault">
+                I agree to Terms & Conditions
+              </label>
+
+              <br><br>
+              <div class="btn0"></div>
+              <button type="button" class="btn btn-danger" onclick="validateForm()">Book Now</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    </form>
+    <div class="two">
+      <div class="three">
+        <h1>1-Day Pass – Any Day</h1>
+        <p>Online offer only; One visit to the Central Zoo®, Guided Bus Tour, Kangaroo Express Bus, Skyfari Aerial Tram,
+          and all regularly scheduled experiences. Experiences above subject to availability. <br><br>1-Day Pass Any Day
+          tickets valid any day within one year from date of purchase. Cannot be exchanged for Value Days ticket. No
+          reservation required1</p>
+      </div>
+
+      <div class="four">
+        <h2>Adult</h2>
+        <h3>Ages 12+</h3>
+        <h1>PKR 250</h1>
+        <br>
+        <h2>Child</h2>
+        <h3>Ages 3-11</h3>
+        <h1>PKR 150</h1>
+        <a href="#linkp"><button type="button" class="btn btn-danger">Buy</button></a>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="text-lg-start ">
+    <div class="container p-4 pb-4">
+      <section class="">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <img src="imgs/Black logo - no background.png" height="55px" class="mb-4" alt="">
+
+            <p class="footer-para">
+              Discover the magic of nature at <strong>THE CENTRAL ZOO.</strong> Join us in protecting our planet's
+              incredible
+              biodiversity. Stay connected for the latest news
+              and events. Thank you for being a part of our journey!
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="quick-links col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class=" mb-4 ">Quick Links</h6>
+            <p> <a href="./index.html"> <img src="imgs/homeF.png" alt="" height="19px">Home</a></p>
+            <p> <a href="./gallery.html"><img src="imgs/galleryF.png" alt="" height="19px">Gallery </a></p>
+            <p> <a href="./about us.html"><img src="imgs/aboutF.png" alt="" height="19px">About us</a> </p>
+            <p> <a href="./contact us.html"><img src="imgs/contactF.png" alt="" height="19px">Contact us</a></p>
+            <p> <a href="./query.html"> <img src="imgs/feedbackF.png" alt="" height="19px">Feedback and Query</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="socials col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class=" mb-4 ">Follow us</h6>
+            <i class="bi bi-facebook"></i> <a href="https://www.facebook.com/login/"> facebook</a> <br>
+            <i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/login"> linkedin</a><br>
+            <i class="bi bi-twitter"></i> <a href="https://twitter.com/"> twitter </a><br>
+            <i class="bi bi-google"></i> <a href="https://www.google.com/"> google </a><br>
+
+      </section>
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="copyright  p-3">
+      <a class="text-white  " href="index.html">The Central Zoo.com</a> <span class="copy"> &nbsp; © 2023
+        Copyright:</span>
+    </div>
+  </footer>
+  </div>
+  <!-- Footer -->
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var adults = document.getElementById('adults').value;
+      var children = document.getElementById('children').value;
+      var infants = document.getElementById('infants').value;
+      var timeslot = document.getElementById('timeslot').value;
+      var visitDate = document.getElementById('visitDate').value;
+      var phoneNumber = document.getElementById('phoneNumber').value;
+      var termsCheckbox = document.getElementById('terms');
+
+      if (
+        name === '' ||
+        email === '' ||
+        adults === '' ||
+        children === '' ||
+        infants === '' ||
+        timeslot === '' ||
+        visitDate === '' ||
+        phoneNumber === '' ||
+        !termsCheckbox.checked
+      ) {
+        alert('Please fill in all fields and agree to Terms & Conditions');
+      } else {
+        alert('Form submitted');
+        // Reset the form
+        document.getElementById('myForm').reset();
+      }
+    }
+  </script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
